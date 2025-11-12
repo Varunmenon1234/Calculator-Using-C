@@ -3,6 +3,8 @@
 
 
 int main(){
+  int choice;
+  do{
   printf("\n Welcome to Simple Calculator\n");
   printf("\nChoose one of the following options:");
   printf("\n1. Addition");
@@ -12,4 +14,8 @@ int main(){
   printf("\n5. Modulus");
   printf("\n6. Power");
   printf("\n7. Exit");
+  printf("\n Now, enter your choice: ");
+  scanf("%d", &choice);
+}while();
+  return 0;
 }
