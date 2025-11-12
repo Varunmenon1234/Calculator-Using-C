@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <math.h>
 
 void print_menu();
 int main(){
@@ -16,6 +16,33 @@ int main(){
     scanf("%f", &first);
     printf("\nPlease enter the second number: ");
     scanf("%f", &second);
+
+    switch(choice)
+    {
+
+      case 1:  //Add
+        result = first + second;
+        break;
+      case 2:  //Subtract
+        result = first - second;
+        break;
+      case 3:  //Multiply
+        result = first * second;
+        break;
+      case 4:  //Divide
+        result = first / second;
+        break;
+      case 5:  //Modulus 
+        result = (int)first % (int)second;
+        break;
+      case 6:  //Power
+        result = first ^ second;
+        break;
+
+      default:
+        break;
+    }
+    printf("\nResult of operation is: %.2f", result);
   }
   return 0;
   }
