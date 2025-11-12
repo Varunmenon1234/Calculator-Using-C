@@ -1,11 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+void print_menu();
 int main(){
   int choice;
-  do{
-  printf("\n Welcome to Simple Calculator\n");
+  double first, second, result;
+
+  while(1){
+    print_menu();
+    scanf("%d", &choice);
+       if (choice == 7){
+        break;
+      }
+    printf("\nPlease enter the first number: ");
+    scanf("%f", &first);
+    printf("\nPlease enter the second number: ");
+    scanf("%f", &second);
+  }
+  return 0;
+  }
+
+void print_menu(){
+  printf("\nWelcome to Simple Calculator\n");
   printf("\nChoose one of the following options:");
   printf("\n1. Addition");
   printf("\n2. Subtract");
@@ -14,8 +30,6 @@ int main(){
   printf("\n5. Modulus");
   printf("\n6. Power");
   printf("\n7. Exit");
-  printf("\n Now, enter your choice: ");
-  scanf("%d", &choice);
-}while();
-  return 0;
+
+  printf("\nNow, enter your choice: ");
 }
