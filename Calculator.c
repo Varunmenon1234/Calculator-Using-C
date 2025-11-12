@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-
+//Time stamp for video: 41:00
 
 double division(double, double);
 int modulus(int, int);
