@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <math.h>
 
+
+
+double division(double, double);
+int modulus(int, int);
 void print_menu();
+
+
 int main(){
   int choice;
   double first, second, result;
@@ -30,10 +36,10 @@ int main(){
         result = first * second;
         break;
       case 4:  //Divide
-        result = first / second;
+        result = division(first, second);
         break;
       case 5:  //Modulus 
-        result = (int)first % (int)second;
+        result = modulus(first, second);
         break;
       case 6:  //Power
         result = pow(first, second);
@@ -45,7 +51,23 @@ int main(){
     printf("\nResult of operation is: %.2f", result);
   }
   return 0;
+}
+double division(double a, double b){
+  if(b == 0){
+    fprintf(stderr, "Invalid Argument for Division.");
+    return NAN;//NAN = Not A Number
+  }else{
+    return a / b;
   }
+}
+int modulus(int a, int b){
+  if(b == 0){
+    fprintf(stderr, "Invalid Argument for Modulus.");
+    return 0;
+  }else{
+    return a % b;
+  }
+}
 
 void print_menu(){
   printf("\nWelcome to Simple Calculator\n");
