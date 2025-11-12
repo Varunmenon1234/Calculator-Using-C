@@ -13,9 +13,9 @@ int main(){
         break;
       }
     printf("\nPlease enter the first number: ");
-    scanf("%f", &first);
+    scanf("%lf", &first);
     printf("\nPlease enter the second number: ");
-    scanf("%f", &second);
+    scanf("%lf", &second);
 
     switch(choice)
     {
@@ -36,7 +36,7 @@ int main(){
         result = (int)first % (int)second;
         break;
       case 6:  //Power
-        result = first ^ second;
+        result = pow(first, second);
         break;
 
       default:
